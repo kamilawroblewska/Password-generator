@@ -87,10 +87,20 @@ var upperCasedCharacters = [
   "Y",
   "Z",
 ];
-
+let multiSelect = []; // missed the empty array
+let randomPass = ""; // missed the empty string
 // Function to prompt user for password options
 function getPasswordOptions() {
+  let passLength, specialSymbols, upperABC, lowerABC, numericOptions;
   // Asking for password length
+  let isPassLengthInvalid = false;
+  do {
+    passLength = prompt("How many characters would you like your password to contain? From 8 to 128.");
+    isPassLengthInvalid = passLength < 8 || passLength > 128 || isNaN(passLength);
+    if (isPassLengthInvalid) {
+      alert("Your password has to be from 8 to 128 characters long");
+    }
+  } while (isPassLengthInvalid);
   // Asking for password options
 }
 
