@@ -167,7 +167,7 @@ const passwordResultEl = document?.querySelector("#password");
 
 // Write password to the #password input
 function writePassword() {
-  passwordResultEl.value = getGeneratedPassword();
+  passwordResultEl.value = generatePassword();
 }
 
 // Add event listener to generate button
