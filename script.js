@@ -95,17 +95,42 @@ function getPasswordOptions() {
   // Asking for password length
   let isPassLengthInvalid = false;
   do {
-    passLength = prompt("How many characters would you like your password to contain? From 8 to 128.");
-    isPassLengthInvalid = passLength < 8 || passLength > 128 || isNaN(passLength);
+    passLength = prompt(
+      "How many characters would you like your password to contain? From 8 to 128."
+    );
+    isPassLengthInvalid =
+      passLength < 8 || passLength > 128 || isNaN(passLength);
     if (isPassLengthInvalid) {
       alert("Your password has to be from 8 to 128 characters long");
     }
   } while (isPassLengthInvalid);
   // Asking for password options
+  let isConditionMet = false;
+  do {
+    specialSymbols = confirm(
+      "Click OK to confirm including special characters"
+    );
+    upperABC = confirm("Click OK to confirm including uppercase characters");
+    lowerABC = confirm("Click OK to confirm including lowercase characters");
+    numericOptions = confirm(
+      "Click OK to confirm including numeric characters"
+    );
+    isConditionMet = specialSymbols || upperABC || lowerABC || numericOptions;
+    console.log(isConditionMet);
+    if (!isConditionMet) {
+      alert("You have to choose at least one type of character !");
+    }
+  } while (!isConditionMet); // loop until one option is chosen
+
+  return { passLength, specialSymbols, upperABC, lowerABC, numericOptions };
 }
 
 // Function for getting a random element from an array
-function getRandom(arr) {}
+function getRandomElement(arr) {
+  if (arr.length === 0) return undefined; // Checking if array is not empty
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+}
 
 // Function to generate password with user input
 function generatePassword() {
