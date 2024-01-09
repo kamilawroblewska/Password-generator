@@ -154,6 +154,9 @@ function generatePassword() {
     multiSelect = [...multiSelect, ...numericCharacters];
   }
   // Generating password
+  for (i = 0; i < passLength; i++) {
+    randomPass += getRandomElement(multiSelect);
+  }
   // Display password to the page
 }
 
