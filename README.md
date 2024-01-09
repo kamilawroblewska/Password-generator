@@ -12,16 +12,16 @@ To use the password generator, simply click the "Generate Password" button. You 
 Your password must be at least 8 characters long but not exceed 128 characters.
 ### Character Types:
 Choose at least one of the following character types:
-->Lowercase
-->Uppercase
-->Numeric
+->Lowercase  
+->Uppercase  
+->Numeric  
 ->Special characters ($@%&*, etc.)
 
 ## Usage:
-->Click the "Generate Password" button.
-->Enter the desired length of your password within the specified range.
-->Choose at least one character type from the provided options.
-->Once all prompts are answered, your password will be generated.
+->Click the "Generate Password" button.  
+->Enter the desired length of your password within the specified range.  
+->Choose at least one character type from the provided options.  
+->Once all prompts are answered, your password will be generated.  
 ->The generated password will be displayed in an alert or written to the page.
 
 ![screen](https://github.com/kamilawroblewska/Password-generator/blob/main/passwordgeneratorscreen.png?raw=true)
