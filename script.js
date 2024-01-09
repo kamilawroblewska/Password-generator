@@ -134,9 +134,27 @@ function getRandomElement(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+  console.log("clicked");
+  multiSelect = [];
+  randomPass = "";
   // Getting password options
+  const { passLength, specialSymbols, upperABC, lowerABC, numericOptions } =
+    getPasswordOptions();
+
+  if (specialSymbols) {
+    multiSelect = [...multiSelect, ...specialCharacters];
+  }
+  if (upperABC) {
+    multiSelect = [...multiSelect, ...upperCasedCharacters];
+  }
+  if (lowerABC) {
+    multiSelect = [...multiSelect, ...lowerCasedCharacters];
+  }
+  if (numericOptions) {
+    multiSelect = [...multiSelect, ...numericCharacters];
+  }
   // Generating password
-  // Display password to the page.
+  // Display password to the page
 }
 
 // Get references to the #generate element
